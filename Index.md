@@ -1,3 +1,3 @@
 # CS30 Demos
-  Color Swap Timer
+- [Color Swap Timer](colour-times-swap)
 # CS30 Projects
