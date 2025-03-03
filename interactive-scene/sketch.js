@@ -1,21 +1,21 @@
 function setup() {
-    createCanvas(500, 500);
+    createCanvas(10000, 10000);
     
     let button = createButton("Click me");
-    button.position(220, 250);
+    button.position(750, 250);
     button.mousePressed(repaint);
     
     
     let thisButton = createButton("Get ball");
-    thisButton.position(50, 400);
+    thisButton.position(150, 400);
     thisButton.mousePressed(ball);
     
     let thisTriangle = createButton("Get triangle");
-    thisTriangle.position(150, 400);
+    thisTriangle.position(250, 400);
     thisTriangle.mousePressed(triangleShape);
     
     let thisRect = createButton("Get rectangle");
-    thisRect.position(275, 400);
+    thisRect.position(375, 400);
     thisRect.mousePressed(rectangleShape);
   }
   
