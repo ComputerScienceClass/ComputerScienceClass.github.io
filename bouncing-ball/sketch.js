@@ -19,34 +19,56 @@ function draw() {
   background(220);
 
   for (let ball of ballArray) {
-    //move ball
-    ball.x += ball.dx;
-
-    ball.y += ball.dy;
-
-    //teleport around edge of screen
-    if (ball.x > width) {
-      ball.x -= width;
-    }
-    else if (ball.x < 0) {
-      ball.x = width;
-    }
-    if (ball.y > height) {
-      ball.y = -ball.radius < 0) {
-
-      }
-    
-    else if (ball.y < 0) {
-      ball.y += height;
-    }
-
-    //display ball
+    moveBalls(ball);
+    displayBalls(ball);
     fill("red");
-    circle(ball.x, ball.y, ball.radius * 2);
+    noStroke();
+    circle(ball.x, ball.y, ball.radius)
   }
 }
 
-function mousePressed() {
+
+
+
+function moveBall() {
+  
+  
+  
+
+  
+    for (let ball of ballArray) {
+      //move ball
+      ball.x += ball.dx;
+  
+      ball.y += ball.dy;
+  
+      //teleport around edge of screen
+      if (ball.x > width) {
+        ball.x -= width;
+      }
+      else if (ball.x < 0) {
+        ball.x = width;
+      }
+      if (ball.y > height) {
+        ball.y = -ball.radius < 0) {
+  
+      }
+      
+      else if (ball.y < 0) {
+        ball.y += height;
+      }
+  
+      //display ball
+      fill("red");
+      circle(ball.x, ball.y, ball.radius * 2);
+    }
+  
+}
+
+
+
+
+function movePressed() {
   spawnBall();
 }
 
