@@ -4,6 +4,7 @@
 # CS30 Projects
 - [interactive-scene](interactive-scene)
 - [Perlin Noise Demo](perlin-noise)
+- [Array](array-)
 
 first opne in visual studio
 then press shift crtl and p and opne p5.js
