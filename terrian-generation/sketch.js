@@ -1,0 +1,47 @@
+// Terrian generation
+// Your Name
+// Date
+//
+// Extra for Experts:
+// - describe what you did to take this project "above and beyond"
+
+// Array
+let terrain = [];
+const NUMBER_OF_RECTS = 10000;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  generateTerrain(width/NUMBER_OF_RECTS);
+  
+
+}
+
+function draw() {
+  background(220);
+  stroke("green");
+  fill("green");
+  for (let SomeRect of terrain) {
+    rect(SomeRect.x, SomeRect.y, SomeRect.w, SomeRect.h)
+  }
+}
+
+function generateTerrain(widthOfRect) {
+  let time = 0;
+  let deltaTime = 0.002;
+  for (let i = 0; i < NUMBER_OF_RECTS; i++) {
+    let theHeight =  noise(time) * height;
+    terrain.push(spawnRectangle(i * widthOfRect, theHeight, widthOfRect));
+    time += deltaTime;
+  }
+}
+
+function spawnRectangle(leftSide, rectHeight, rectWidth) {
+  let theRect = {
+    x: leftSide,
+    y: height - rectHeight,
+    w: rectWidth,
+    h: rectHeight,
+  };
+
+  return theRect;
+}
