@@ -11,8 +11,11 @@ function setup() {
 }
 
 function draw() {
-  background(220);
-  background("orange")
+  background("orange");
+  circle(500, 500, 250);
+  noStroke();
+  
+
 }
 
 
